@@ -1,32 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page d'exemple</title>
+    <title>La Page La Plus Drôle de l'Univers</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            font-family: 'Comic Sans MS', cursive;
+            background-color: #fffbcc;
             color: #333;
             text-align: center;
             padding: 50px;
+            animation: couleurFond 10s infinite;
+        }
+        @keyframes couleurFond {
+            0% { background-color: #fffbcc; }
+            25% { background-color: #ffd700; }
+            50% { background-color: #ff8c00; }
+            75% { background-color: #f08080; }
+            100% { background-color: #fffbcc; }
         }
         h1 {
-            color: #0073e6;
+            color: #ff4500;
+            font-size: 4em;
+            text-transform: uppercase;
+            letter-spacing: 5px;
         }
         p {
-            font-size: 18px;
+            font-size: 20px;
+        }
+        .joke {
+            font-size: 24px;
+            color: #0073e6;
+            animation: blingBling 1.5s infinite;
+        }
+        @keyframes blingBling {
+            0%, 100% { color: #0073e6; }
+            50% { color: #ff6347; }
+        }
+        .punchline {
+            font-size: 28px;
+            color: #32cd32;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        img {
+            margin-top: 20px;
+            width: 400px;
+            border: 5px solid #333;
+            animation: rotateImage 5s infinite linear;
+        }
+        @keyframes rotateImage {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
         a {
-            color: #0073e6;
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ff4500;
+            color: white;
             text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        a:hover {
+            background-color: #32cd32;
         }
     </style>
 </head>
 <body>
-    <h1>Bienvenue sur ma page d'exemple</h1>
-    <p>Ceci est une page d'exemple simple avec un fichier <strong>index.html</strong>.</p>
-    <p>Vous pouvez trouver plus d'informations sur <a href="https://github.com">GitHub</a>.</p>
+    <h1>Bienvenue sur la page la plus drôle !</h1>
+    <p class="joke">Pourquoi les développeurs aiment-ils les algorithmes ?</p>
+    <p class="punchline">Parce qu'ils se débloquent toujours à la dernière minute ! 😂</p>
+    
+    <img src="https://media.giphy.com/media/l0HlHFRbmaZtBRhXG/giphy.gif" alt="GIF de danse drôle">
+    
+    <p>Et oui, même les bugs finissent par danser après une bonne correction !</p>
+    
+    <a href="https://www.github.com" target="_blank">Rejoins-moi pour plus de fun sur GitHub !</a>
 </body>
 </html>
